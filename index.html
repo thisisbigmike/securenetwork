@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Design and implementation of a secured network model for mitigating cybercrime using VLANs, extended ACLs, firewall controls and Cisco Packet Tracer simulation." />
+  <title>Secured Network Model | VLAN Packet Tracer Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Secured Network Model home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" role="img"><path d="M22 3.5 36 9v10.7c0 9.3-5.8 16.9-14 20.8-8.2-3.9-14-11.5-14-20.8V9l14-5.5Z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M14.7 22.7 19.5 27l9.8-10.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"/></svg>
+        </span>
+        <span><strong>SecureNet</strong><small>Packet Tracer Simulation</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#vlans">VLANs</a>
+        <a href="#controls">Controls</a>
+        <a href="#validation">Validation</a>
+        <a href="#findings">Findings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="status-dot"></span> B.Sc. Computer Science Project · September 2026</div>
+        <h1>Design and Implementation of a <span>Secured Network Model</span> for Mitigating Cybercrime</h1>
+        <p class="hero-sub">A Cisco Packet Tracer simulation of VLAN segmentation, router-based inter-VLAN routing, extended access control and firewall enforcement for a five-department organizational network.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#architecture">Explore architecture</a>
+          <a class="btn btn-secondary" href="assets/project-report.docx" download>Download project report</a>
+        </div>
+        <div class="hero-meta" aria-label="Project highlights">
+          <div><strong>05</strong><span>Department VLANs</span></div>
+          <div><strong>ACL</strong><span>Policy Enforcement</span></div>
+          <div><strong>ASA</strong><span>Firewall Layer</span></div>
+          <div><strong>PT</strong><span>Simulation Platform</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Animated network security illustration">
+        <div class="visual-grid"></div>
+        <div class="radar"></div>
+        <div class="shield-core">
+          <svg viewBox="0 0 120 140" aria-hidden="true"><path d="M60 7 108 25v36c0 33-20 58-48 72C32 119 12 94 12 61V25L60 7Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M38 69 53 83 83 50" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/></svg>
+          <span>POLICY ENFORCED</span>
+        </div>
+        <div class="packet packet-a"></div><div class="packet packet-b"></div><div class="packet packet-c"></div>
+        <div class="node-tag t1">VLAN 1</div><div class="node-tag t2">VLAN 2</div><div class="node-tag t3">VLAN 3</div><div class="node-tag t4">VLAN 4</div><div class="node-tag t5">VLAN 5</div>
+      </div>
+    </section>
+
+    <section class="principle-strip" aria-label="Security principle">
+      <div class="section-shell principle-inner">
+        <span>SECURITY MODEL</span>
+        <p>Segment trust zones. Route deliberately. Permit only required traffic. Block everything else.</p>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="overview">
+      <div class="section-heading reveal">
+        <span class="kicker">01 / Project Overview</span>
+        <h2>From a flat network to controlled trust zones</h2>
+        <p>The project addresses unauthorized access and lateral movement by splitting an organizational LAN into isolated broadcast domains, then governing inter-department traffic with routing, ACLs and firewall rules.</p>
+      </div>
+      <div class="overview-grid">
+        <article class="info-card reveal"><span class="card-index">01</span><h3>Problem</h3><p>A flat or poorly protected network can expose organizational systems and information to unauthorized access, misuse and network-based attacks.</p></article>
+        <article class="info-card reveal"><span class="card-index">02</span><h3>Aim</h3><p>Design and implement a secured network model that reduces unauthorized access by separating users and enforcing controlled communication between network segments.</p></article>
+        <article class="info-card reveal"><span class="card-index">03</span><h3>Method</h3><p>Build and configure the model in Cisco Packet Tracer using VLANs, IEEE 802.1Q subinterfaces, routing, an ASA firewall and access-control logic.</p></article>
+        <article class="info-card reveal"><span class="card-index">04</span><h3>Outcome</h3><p>Five departmental VLANs were configured and tested. Inter-department communication is treated as restricted unless the security policy explicitly permits it.</p></article>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <span class="kicker">02 / Architecture</span>
+          <h2>Layered network security architecture</h2>
+          <p>The design combines segmentation at Layer 2 with routed policy enforcement at Layer 3 and a perimeter firewall for traffic entering or leaving protected zones.</p>
+        </div>
+
+        <div class="architecture-layout">
+          <div class="topology-card reveal">
+            <div class="topology-toolbar">
+              <div><span class="live-dot"></span> Logical model</div>
+              <button class="text-btn" id="openOriginal" type="button">View original Packet Tracer topology</button>
+            </div>
+            <svg class="topology-svg" viewBox="0 0 900 560" role="img" aria-label="Logical diagram showing internet, firewall, router, core switch and five departmental VLANs">
+              <defs>
+                <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#74f9d7"/></marker>
+              </defs>
+              <g class="topology-lines" fill="none" stroke="#294b55" stroke-width="3">
+                <path d="M450 72V138"/><path d="M450 198V264"/><path d="M450 324V380"/>
+                <path d="M450 420 150 486"/><path d="M450 420 300 486"/><path d="M450 420 450 486"/><path d="M450 420 600 486"/><path d="M450 420 750 486"/>
+              </g>
+              <g class="flow-line" fill="none" stroke="#74f9d7" stroke-width="2.5" stroke-dasharray="8 12" marker-end="url(#arrow)"><path d="M450 72V138"/><path d="M450 198V264"/><path d="M450 324V380"/></g>
+
+              <g class="net-node cloud" transform="translate(392 28)"><rect width="116" height="44" rx="22"/><text x="58" y="28">INTERNET</text></g>
+              <g class="net-node firewall" transform="translate(392 138)"><rect width="116" height="60" rx="16"/><text x="58" y="25">ASA</text><text class="node-sub" x="58" y="43">FIREWALL</text></g>
+              <g class="net-node router" transform="translate(392 264)"><rect width="116" height="60" rx="16"/><text x="58" y="25">ROUTER</text><text class="node-sub" x="58" y="43">802.1Q</text></g>
+              <g class="net-node switch" transform="translate(380 380)"><rect width="140" height="40" rx="12"/><text x="70" y="26">CORE SWITCH</text></g>
+
+              <g class="vlan-node v1" transform="translate(90 486)" data-vlan="1"><rect width="120" height="58" rx="14"/><text x="60" y="24">VLAN 1</text><text class="node-sub" x="60" y="42">Management</text></g>
+              <g class="vlan-node v2" transform="translate(240 486)" data-vlan="2"><rect width="120" height="58" rx="14"/><text x="60" y="24">VLAN 2</text><text class="node-sub" x="60" y="42">Admin</text></g>
+              <g class="vlan-node v3" transform="translate(390 486)" data-vlan="3"><rect width="120" height="58" rx="14"/><text x="60" y="24">VLAN 3</text><text class="node-sub" x="60" y="42">Maintenance</text></g>
+              <g class="vlan-node v4" transform="translate(540 486)" data-vlan="4"><rect width="120" height="58" rx="14"/><text x="60" y="24">VLAN 4</text><text class="node-sub" x="60" y="42">Account</text></g>
+              <g class="vlan-node v5" transform="translate(690 486)" data-vlan="5"><rect width="120" height="58" rx="14"/><text x="60" y="24">VLAN 5</text><text class="node-sub" x="60" y="42">Works</text></g>
+            </svg>
+            <div class="topology-note"><strong>Trust boundary:</strong> each VLAN is a separate broadcast domain. Inter-VLAN traffic must traverse a policy enforcement point before reaching another department.</div>
+          </div>
+
+          <aside class="architecture-facts reveal">
+            <div class="fact"><span>01</span><div><h3>Segmentation</h3><p>Departmental users and resources are divided into five VLANs to reduce broadcast scope and constrain lateral access.</p></div></div>
+            <div class="fact"><span>02</span><div><h3>Inter-VLAN Routing</h3><p>Router subinterfaces use 802.1Q encapsulation with one gateway per departmental subnet.</p></div></div>
+            <div class="fact"><span>03</span><div><h3>Traffic Filtering</h3><p>Extended ACLs are intended to permit required flows and deny unauthorized cross-VLAN communication.</p></div></div>
+            <div class="fact"><span>04</span><div><h3>Perimeter Control</h3><p>The ASA firewall adds a boundary between trusted internal traffic and less trusted external networks.</p></div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="vlans">
+      <div class="section-heading reveal">
+        <span class="kicker">03 / VLAN Plan</span>
+        <h2>Five departments. Five isolated network zones.</h2>
+        <p>Select a VLAN to inspect its subnet and default gateway.</p>
+      </div>
+      <div class="vlan-layout">
+        <div class="vlan-list reveal" role="list">
+          <button class="vlan-card active" data-vlan="1" type="button"><span class="vlan-number">01</span><span><strong>Management</strong><small>192.168.1.0/24</small></span><i></i></button>
+          <button class="vlan-card" data-vlan="2" type="button"><span class="vlan-number">02</span><span><strong>Administrative</strong><small>192.168.2.0/24</small></span><i></i></button>
+          <button class="vlan-card" data-vlan="3" type="button"><span class="vlan-number">03</span><span><strong>Maintenance</strong><small>192.168.3.0/24</small></span><i></i></button>
+          <button class="vlan-card" data-vlan="4" type="button"><span class="vlan-number">04</span><span><strong>Account</strong><small>192.168.4.0/24</small></span><i></i></button>
+          <button class="vlan-card" data-vlan="5" type="button"><span class="vlan-number">05</span><span><strong>Works</strong><small>192.168.5.0/24</small></span><i></i></button>
+        </div>
+        <div class="vlan-detail reveal" id="vlanDetail" aria-live="polite">
+          <div class="detail-top"><span class="detail-badge">VLAN 1</span><span class="risk-badge">Management domain</span></div>
+          <h3>Management Department</h3>
+          <div class="detail-grid"><div><span>Network</span><strong>192.168.1.0/24</strong></div><div><span>Gateway</span><strong>192.168.1.1</strong></div><div><span>Encapsulation</span><strong>802.1Q</strong></div><div><span>Trust role</span><strong>Administrative access</strong></div></div>
+          <div class="detail-warning"><span>!</span><p><strong>Known design weakness:</strong> the report identifies VLAN 1 as a remaining access path to the management domain. A production deployment should avoid relying on VLAN 1 for management or native traffic.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section controls-section" id="controls">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <span class="kicker">04 / Security Controls</span>
+          <h2>Defense through segmentation and explicit policy</h2>
+          <p>The model uses complementary controls so that one mechanism is not treated as the entire security solution.</p>
+        </div>
+        <div class="control-grid">
+          <article class="control-card reveal"><div class="control-icon">V</div><h3>VLAN Segmentation</h3><p>Separates departments into distinct broadcast domains and reduces unnecessary direct exposure between user groups.</p><span>Layer 2</span></article>
+          <article class="control-card reveal"><div class="control-icon">R</div><h3>Router Subinterfaces</h3><p>Provides gateway services for each subnet through tagged 802.1Q links and centralizes inter-VLAN routing.</p><span>Layer 3</span></article>
+          <article class="control-card reveal"><div class="control-icon">A</div><h3>Extended ACLs</h3><p>Filters traffic by source, destination and service. Placement and direction are critical to effective enforcement.</p><span>Policy</span></article>
+          <article class="control-card reveal"><div class="control-icon">F</div><h3>ASA Firewall</h3><p>Adds an inside/outside security boundary and can block traffic from external or internal sources where policy requires it.</p><span>Perimeter</span></article>
+          <article class="control-card reveal"><div class="control-icon">S</div><h3>Switch Hardening</h3><p>Restricts device administration to authorized personnel and reduces exposure from insecure switch configuration.</p><span>Hardening</span></article>
+          <article class="control-card reveal"><div class="control-icon">U</div><h3>User Awareness</h3><p>Recognizes that technical controls alone are insufficient and that informed users are part of organizational cyber defense.</p><span>People</span></article>
+        </div>
+
+        <div class="policy-lab reveal">
+          <div class="lab-intro">
+            <span class="kicker">Interactive policy demonstrator</span>
+            <h3>Simulate an inter-VLAN access decision</h3>
+            <p>This demonstrates the project’s intended control logic. It is not a reconstruction of every ACL statement in the Packet Tracer file.</p>
+          </div>
+          <div class="lab-controls">
+            <label>Source VLAN<select id="sourceVlan"><option value="1">VLAN 1 · Management</option><option value="2">VLAN 2 · Administrative</option><option value="3">VLAN 3 · Maintenance</option><option value="4">VLAN 4 · Account</option><option value="5">VLAN 5 · Works</option></select></label>
+            <label>Destination VLAN<select id="destVlan"><option value="2">VLAN 2 · Administrative</option><option value="1">VLAN 1 · Management</option><option value="3">VLAN 3 · Maintenance</option><option value="4">VLAN 4 · Account</option><option value="5">VLAN 5 · Works</option></select></label>
+            <label class="permit-switch"><input type="checkbox" id="permitRule"/><span class="switch-ui"></span><span>Explicit ACL permit exists</span></label>
+            <button class="btn btn-primary" id="runPolicy" type="button">Evaluate traffic</button>
+          </div>
+          <div class="policy-output denied" id="policyOutput"><div class="result-icon">×</div><div><span>DEFAULT RESULT</span><strong>DENIED</strong><p>Cross-VLAN traffic is blocked until a security rule explicitly permits the required communication.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-shell" id="validation">
+      <div class="section-heading reveal">
+        <span class="kicker">05 / Validation</span>
+        <h2>Simulation evidence and connectivity checks</h2>
+        <p>Packet Tracer was used to configure the devices and verify network behavior through command-line inspection and ping-based connectivity testing.</p>
+      </div>
+      <div class="validation-grid">
+        <article class="evidence-card reveal"><button class="image-button" data-image="assets/ping-test-1.png" data-caption="Packet Tracer ping validation screenshot"><img src="assets/ping-test-1.png" alt="Packet Tracer command prompt showing ping test results" /></button><div><span>Connectivity test</span><h3>Ping validation</h3><p>Ping tests were used to observe whether traffic between configured network segments was reachable under the applied policy.</p></div></article>
+        <article class="evidence-card reveal"><button class="image-button" data-image="assets/firewall-cli.png" data-caption="ASA firewall command-line configuration"><img src="assets/firewall-cli.png" alt="Cisco ASA firewall command-line configuration screenshot" /></button><div><span>Firewall validation</span><h3>ASA configuration</h3><p>Firewall interfaces and security settings were inspected from the simulated ASA command-line environment.</p></div></article>
+      </div>
+      <div class="validation-summary reveal">
+        <div class="metric"><strong>5/5</strong><span>VLANs configured</span></div>
+        <div class="metric"><strong>802.1Q</strong><span>Tagged interconnect</span></div>
+        <div class="metric"><strong>ACL</strong><span>Traffic filtering</span></div>
+        <div class="metric"><strong>Simulated</strong><span>Test environment</span></div>
+      </div>
+    </section>
+
+    <section class="section findings-section" id="findings">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <span class="kicker">06 / Findings & Limitations</span>
+          <h2>What the model demonstrates, and what it does not</h2>
+          <p>A credible project presentation should distinguish a successful simulation from production-grade security assurance.</p>
+        </div>
+        <div class="finding-columns">
+          <div class="finding-box success reveal"><span>Demonstrated</span><h3>Segmentation reduces unnecessary reachability</h3><p>Five departmental groups are separated logically, and inter-VLAN communication can be subjected to explicit routing and filtering policy rather than unrestricted lateral access.</p></div>
+          <div class="finding-box warning reveal"><span>Limitation</span><h3>Simulation is not production validation</h3><p>The design was tested in Cisco Packet Tracer. Real hardware, production traffic, device failure, throughput, logging and adversarial testing remain outside the demonstrated scope.</p></div>
+          <div class="finding-box risk reveal"><span>Residual risk</span><h3>VLAN 1 remains a management access point</h3><p>The report specifically identifies VLAN 1 as a path through which the internal management domain may still be exposed. VLAN segmentation alone is therefore not sufficient.</p></div>
+        </div>
+
+        <div class="recommendations reveal">
+          <div class="recommendation-head"><span class="kicker">Recommended next steps</span><h3>Strengthen the design before real-world deployment</h3></div>
+          <div class="recommendation-list">
+            <div><span>01</span><p><strong>Harden switching infrastructure.</strong> Restrict administrative access and apply basic switch-security controls.</p></div>
+            <div><span>02</span><p><strong>Use centralized VLAN management carefully.</strong> The report recommends VLAN Trunking Protocol for centralized VLAN database control and maintenance.</p></div>
+            <div><span>03</span><p><strong>Place extended ACLs correctly.</strong> Apply rules to the correct router interface or subinterface and in the correct inbound or outbound direction.</p></div>
+            <div><span>04</span><p><strong>Reduce reliance on VLAN 1.</strong> Move management and native VLAN roles to dedicated non-default VLANs in a production design.</p></div>
+            <div><span>05</span><p><strong>Improve cybersecurity awareness.</strong> Technical controls should be supported by public and organizational education on cybercrime risks.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-credit">
+      <div class="section-shell credit-inner reveal">
+        <div><span class="kicker">Academic Project</span><h2>Secured Network Model for Mitigating Cybercrime</h2><p>Prepared by <strong>Ukwueze Martins Onyekachi</strong> · Department of Computer Science · Institute for Management and Technology, in affiliation with University of Nigeria, Nsukka.</p></div>
+        <a class="btn btn-primary" href="#top">Back to top</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner"><p>Project showcase website · Cisco Packet Tracer VLAN security simulation</p><p>Designed as an academic presentation of the submitted network model.</p></div>
+  </footer>
+
+  <dialog class="image-modal" id="imageModal">
+    <button class="modal-close" type="button" aria-label="Close image">×</button>
+    <img id="modalImage" alt="Expanded project evidence" />
+    <p id="modalCaption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
